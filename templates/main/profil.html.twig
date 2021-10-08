@@ -6,6 +6,25 @@
 
     <div class="container-fluid">
 
+        {# Bloc de gauche #}
+        <div class="col-12 col-md-3 bg-black px-2 py-3 text-center">
+
+            {# Image de profil #}
+            <div class="row">
+                <div class="col-12 profil-photo mx-2 d-flex justify-content-center align-items-center">
+
+
+                </div>
+            </div>
+
+            {# Lien vers la page permettant de changer de photo de profil #}
+            <div class="row">
+                <div class="col-12 pt-3">
+                    <a href="#">Modifier la photo de profil</a>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <h1 class="col-12 text-center my-5 ">Profil de {{ app.user.pseudonym }}<i class="fas fa-smile mx-1"></i></h1>
         </div>
