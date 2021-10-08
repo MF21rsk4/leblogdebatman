@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <h1 class="col-12 text-center my-5 ">Profil de {{ app.user.pseudonym }}<i class="fas fa-smile mx-1"></i></h1>
+        </div>
+
+        <div class="row">
+
+
+
+            <p class="col-12 col-md-4 offset-md-1 ">Ton email : {{ app.user.email }}</div>
+            <p class="col-12 col-md-4 offset-md-1 ">Arrivée à Gotham : {{ app.user.registrationDate|date('d/m/Y') }}</div>
+            <p class="col-12 col-md-4 offset-md-2 ">---> Ton rang: {{ is_granted('ROLE_ADMIN') ? 'Administrateur' : 'Utilisateur' }}</div>
+
+        <div class="batman-cover row my-5"></div>
+    </div>
+
+{% endblock %}
