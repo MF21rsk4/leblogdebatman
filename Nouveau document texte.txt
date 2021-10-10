@@ -1,0 +1,44 @@
+try catch
+--------------------------------
+// requete pour recupérer les catégories et leur id pour le formulaire
+$categories = $bdd->query('SELECT * FROM category;')->fetchAll(PDO::FETCH_ASSOC);
+
+/**
+ * On récupère l'annonce par son ID
+
+$advertManager = new AdvertManager();
+$advert = $advertManager->getById($_GET['id']);
+
+print_r($advert);
+?>
+
+-------------------------------------
+
+(JS - AJAX)
+// 1 - Ecouteur d'événement sur le formulaire
+// 2 - Récupérer les données du formulaire
+// 3 - Transmettre au serveur (PHP)
+// ------> VOIR PHP
+// 8 - afficher le message (soit Erreur soit Valide)
+// 9 - Réinitialiser le formulaire
+
+--------------------------
+index
+
+1. entité (class.php)
+2. manager
+3. controler.php / chaque entité.JS
+	_JS function afficheEntité ($('.insert')pour tbody)
+	_ controller isset : $manager = new manager
+	_ public function manager.class.php
+	_controler echo JSON
+delete
+update
+_ouvrir modal -> .js > .on(click.modifier
+_
+
+creationFormulaire -> pour les select/option de formulaire
+(dans emprunt.js)
+
+-----------
+last Insert ID = Row Count() (pour 2.manager)
