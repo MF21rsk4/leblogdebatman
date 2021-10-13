@@ -22,9 +22,6 @@ class NewArticleFormType extends AbstractType
             // Champ titre
             ->add('title', TextType::class, [
                 'label' => 'Titre',
-                'attr' => [
-                    'class' => 'd-none',
-                ],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Merci de renseigner un titre',
@@ -41,6 +38,10 @@ class NewArticleFormType extends AbstractType
             // Champ contenu
             ->add('content', CKEditorType::class, [
                 'label' => 'Contenu',
+                'attr' => [
+                    'class' => 'd-none',
+                ],
+                'purify_html' => true,
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Merci de renseigner un contenu',

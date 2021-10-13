@@ -19,7 +19,9 @@
 .phpunit.result.cache
 ###< phpunit/phpunit ###
 
-### exclusions persos
+### exlusions persos
 .idea/
 /migrations/*.php
+/public/images/profils/*
+!/public/images/profils/.gitignore
 ###
